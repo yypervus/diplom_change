@@ -1,0 +1,42 @@
+2021-10-30T15:12:13.132121+0500INFOИнформация из Vk запрошена успешно
+2021-10-30T15:12:13.133125+0500INFOИнформация отконвертирована в список
+2021-10-30T15:12:13.744420+0500WARNINGУказанная папка на Яндекс диске была создана ранее
+2021-10-30T15:12:17.277551+0500INFOФотографии загружены
+2021-10-30T15:12:17.280547+0500INFOСоздан файл с информацией по сохранённым фотографиям
+2021-10-30T15:12:17.282529+0500INFO
+Программа завершена успешно!
+2021-10-30T15:12:17.282529+0500INFOКонец
+2021-10-30T15:58:44.592469+0500INFOИнформация из Vk запрошена успешно
+2021-10-30T15:58:44.593468+0500INFOИнформация отконвертирована в список
+2021-10-30T15:58:44.737670+0500WARNINGУказанная папка на Яндекс диске была создана ранее
+2021-10-30T15:58:44.906771+0500ERRORAn error has been caught in function 'copying_photos_to_disk', process 'MainProcess' (10288), thread 'MainThread' (11580):
+Traceback (most recent call last):
+
+  File "C:\Users\yypervus\PycharmProjects\pythonProject\diplom\main_dip.py", line 14, in <module>
+    admin.copying_photos_to_disk(begemot_korovin)
+    |     |                      -> <Vk.VkUser object at 0x00000177B3FCF2E0>
+    |     -> <function YaUser.copying_photos_to_disk at 0x00000177B3FCD790>
+    -> <Ya.YaUser object at 0x00000177B3FCF400>
+
+> File "C:\Users\yypervus\PycharmProjects\pythonProject\diplom\Ya.py", line 62, in copying_photos_to_disk
+    self.upload(user)
+    |    |      -> <Vk.VkUser object at 0x00000177B3FCF2E0>
+    |    -> <function YaUser.upload at 0x00000177B3FCD430>
+    -> <Ya.YaUser object at 0x00000177B3FCF400>
+
+  File "C:\Users\yypervus\PycharmProjects\pythonProject\diplom\Ya.py", line 53, in upload
+    response.raise_for_status()
+    |        -> <function Response.raise_for_status at 0x00000177B38D18B0>
+    -> <Response [401]>
+
+  File "C:\Users\yypervus\PycharmProjects\pythonProject\venv\lib\site-packages\requests\models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          |         |                        -> <Response [401]>
+          |         -> '401 Client Error: UNAUTHORIZED for url: https://cloud-api.yandex.net/v1/disk/resources/upload?path=directory_file%2F14.jpg&u...
+          -> <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 401 Client Error: UNAUTHORIZED for url: https://cloud-api.yandex.net/v1/disk/resources/upload?path=directory_file%2F14.jpg&url=https%3A%2F%2Fsun9-28.userapi.com%2Fimpf%2Fc850732%2Fv850732336%2F16fa43%2F3b7pxN3vzmI.jpg%3Fsize%3D400x400%26quality%3D96%26sign%3De43d16ae62020287b2e5ae9073d3f878%26c_uniq_tag%3D5rB9bM19KvnvwLaYvsXilF2uT-MWISzsiNrvNJH65UQ%26type%3Dalbum
+2021-10-30T15:58:44.981393+0500INFOСоздан файл с информацией по сохранённым фотографиям
+2021-10-30T15:58:44.982391+0500INFO
+Программа завершена успешно!
+2021-10-30T15:58:44.982391+0500INFOКонец
